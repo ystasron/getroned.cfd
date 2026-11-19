@@ -5,7 +5,7 @@ export const TMDB_BASE = 'https://api.tmdb.org/3';
 export const IMG = 'https://image.tmdb.org/t/p';
 
 export const AD_URL =
-  import.meta.env?.VITE_AD_URL || 'https://hai8g.com/4/11836218';
+  import.meta.env?.VITE_AD_URL || 'https://directyp.org/4/f8163372a7f0a57f7e699481cf8236b4';
 
 export const REQUIRED_ADS = 1;
 export const MIN_VIEW_SECONDS = 5;
