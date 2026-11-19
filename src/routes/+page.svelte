@@ -1,13 +1,16 @@
 <script>
   import { onMount } from 'svelte';
   import Row from '$lib/components/Row.svelte';
+  import AnimeRow from '$lib/components/AnimeRow.svelte';
   import { goto } from '$app/navigation';
+  import { animeTop } from '$lib/api/anime.js';
   import {
     trending, popularMovies, popularSeries, nowPlaying, returningSeries, topRatedMovies, topRatedSeries,
     backdrop, titleOf, typeOf
   } from '$lib/api/tmdb.js';
 
   let hero = null;
+  let animeRow = { items: [], loading: true };
   let rows = [
     { title: 'Trending Now', items: [], loading: true, type: null },
     { title: 'Popular Movies', items: [], loading: true, type: 'movie' },
@@ -19,6 +22,7 @@
   ];
 
   onMount(async () => {
+    loadAnime();
     const loaders = [trending, popularMovies, popularSeries, nowPlaying, returningSeries, topRatedMovies, topRatedSeries];
     const results = await Promise.allSettled(loaders.map((f) => f()));
     results.forEach((r, i) => {
@@ -29,6 +33,15 @@
     const pool = [...rows[0].items, ...rows[1].items].filter((x) => x.backdrop_path);
     hero = pool[Math.floor(Math.random() * Math.min(pool.length, 8))] || null;
   });
+
+  async function loadAnime() {
+    try {
+      const data = await animeTop(20);
+      animeRow = { items: Array.isArray(data?.data) ? data.data : [], loading: false };
+    } catch {
+      animeRow = { items: [], loading: false };
+    }
+  }
 </script>
 
 <svelte:head><title>getroned.cfd — Home</title></svelte:head>
@@ -61,4 +74,6 @@
   {#each rows as row}
     <Row title={row.title} items={row.items} loading={row.loading} type={row.type} />
   {/each}
+
+  <AnimeRow title="Trending Anime" items={animeRow.items} loading={animeRow.loading} />
 </div>
