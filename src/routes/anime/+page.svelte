@@ -42,7 +42,6 @@
   let lastQ = '';
   let searching = false;
   let searchResults = [];
-  let loadError = '';
   let defaultsLoaded = false;
   let genresLoaded = false;
 
@@ -93,9 +92,6 @@
       row.loading = false;
     });
     rows = rows;
-    loadError = lists.every((list) => !list.length)
-      ? 'Could not load anime right now. Please try again.'
-      : '';
 
     const candidate = lists[0].find((item) => item.banner_image) || lists[0][0];
     if (candidate) {
@@ -164,13 +160,6 @@
       <button class="btn btn-accent" type="submit">Search</button>
     </form>
   </div>
-
-  {#if loadError && !q}
-    <div class="anime-error">
-      <span>{loadError}</span>
-      <button class="btn btn-accent" on:click={() => window.location.reload()}>Retry</button>
-    </div>
-  {/if}
 
   {#if q}
     <AnimeRow title={`Results for “${q}”`} items={searchResults} loading={searching} />
@@ -243,18 +232,5 @@
   .search-empty {
     padding: 24px clamp(16px, 4vw, 48px);
     color: var(--text-dim);
-  }
-
-  .anime-error {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin: 18px clamp(16px, 4vw, 48px) 0;
-    padding: 14px 18px;
-    color: var(--text-dim);
-    background: var(--glass-fill);
-    border: 1px solid var(--glass-edge);
-    border-radius: 14px;
   }
 </style>

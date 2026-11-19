@@ -1,10 +1,6 @@
 import { error, json } from '@sveltejs/kit';
 
-const SOURCES = [
-  { base: 'https://api.reanime.to', origin: 'https://reanime.to' },
-  { base: 'https://api.reanime.cz', origin: 'https://reanime.cz' },
-  { base: 'https://reanime.cz', origin: 'https://reanime.cz' }
-];
+const BASE = 'https://reanime.cz';
 const UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36';
 const TTL = 5 * 60 * 1000;
@@ -22,43 +18,31 @@ async function upstream(path, ttl = TTL) {
   const hit = memo.get(path);
   if (hit && Date.now() - hit.at < ttl) return hit.value;
 
-  const statuses = [];
-
-  for (const source of SOURCES) {
-    let res;
-    try {
-      res = await fetch(`${source.base}${path}`, {
-        headers: {
-          'user-agent': UA,
-          accept: 'application/json, text/plain, */*',
-          'accept-language': 'en-US,en;q=0.9',
-          referer: `${source.origin}/`,
-          origin: source.origin,
-          'sec-ch-ua': '"Chromium";v="157", "Not(A:Brand";v="24"',
-          'sec-ch-ua-mobile': '?0',
-          'sec-ch-ua-platform': '"Windows"'
-        },
-        signal: AbortSignal.timeout(15000),
-        redirect: 'follow'
-      });
-    } catch {
-      continue;
-    }
-
-    statuses.push(res.status);
-    if (!res.ok) continue;
-
-    try {
-      const data = await res.json();
-      remember(path, data);
-      return data;
-    } catch {
-      continue;
-    }
+  let res;
+  try {
+    res = await fetch(`${BASE}${path}`, {
+      headers: {
+        'user-agent': UA,
+        accept: 'application/json, text/plain, */*',
+        referer: 'https://reanime.cz/'
+      },
+      signal: AbortSignal.timeout(20000)
+    });
+  } catch {
+    throw error(502, 'Anime source unavailable');
   }
 
-  const only404 = statuses.length > 0 && statuses.every((status) => status === 404);
-  throw error(only404 ? 404 : 502, only404 ? 'Anime not found' : 'Anime source unavailable');
+  if (!res.ok) throw error(res.status === 404 ? 404 : 502, `Anime source returned ${res.status}`);
+
+  let data;
+  try {
+    data = await res.json();
+  } catch {
+    throw error(502, 'Anime source returned invalid data');
+  }
+
+  remember(path, data);
+  return data;
 }
 
 function int(value, fallback, min, max) {
