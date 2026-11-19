@@ -1,0 +1,10 @@
+{
+  "name": "getroned.cfd",
+  "short_name": "getroned.cfd",
+  "description": "Stream movies and TV series for free.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#010101",
+  "theme_color": "#010101",
+  "icons": []
+}
