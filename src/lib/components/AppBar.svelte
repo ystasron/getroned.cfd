@@ -21,7 +21,9 @@
 
 <header class="appbar glass">
   <div class="appbar-brand">
-    <a href="/">getroned<span class="dot">.cfd</span></a>
+    <a href="/" aria-label="getroned.cfd — home">
+      <img class="brand-logo" src="/logo.svg" alt="getroned.cfd" />
+    </a>
   </div>
   <div class="appbar-actions">
     <form class="search-wrap" on:submit={submit}>
@@ -50,10 +52,15 @@
 </header>
 
 <style>
+  .appbar-brand a { display: flex; align-items: center; }
+  .brand-logo { display: block; height: 30px; width: auto; }
   .desktop { display: grid; }
   .about-mobile { display: none; }
   @media (max-width: 900px) {
     .desktop { display: none; }
     .about-mobile { display: grid; }
+  }
+  @media (max-width: 600px) {
+    .brand-logo { height: 25px; }
   }
 </style>

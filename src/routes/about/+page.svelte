@@ -277,7 +277,7 @@
     margin-bottom: 36px;
     border: 1px solid var(--surface-border-color);
     background:
-      radial-gradient(120% 140% at 88% -10%, rgba(231, 170, 227, 0.22), transparent 58%),
+      radial-gradient(120% 140% at 88% -10%, rgba(139, 124, 255, 0.22), transparent 58%),
       linear-gradient(160deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.012));
     box-shadow: var(--glass-shadow);
   }
@@ -288,7 +288,7 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
-    border: 1px solid rgba(231, 170, 227, 0.5);
+    border: 1px solid rgba(139, 124, 255, 0.5);
     border-radius: 999px;
     padding: 5px 13px;
     margin-bottom: 16px;
@@ -350,9 +350,9 @@
   }
   .ab-stat:hover {
     transform: translateY(-4px);
-    border-color: rgba(231, 170, 227, 0.55);
+    border-color: rgba(139, 124, 255, 0.55);
     background: rgba(255, 255, 255, 0.06);
-    box-shadow: 0 16px 40px rgba(231, 170, 227, 0.12);
+    box-shadow: 0 16px 40px rgba(139, 124, 255, 0.12);
   }
   .ab-num {
     position: relative;
@@ -418,7 +418,7 @@
   }
   .ab-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(231, 170, 227, 0.45);
+    border-color: rgba(139, 124, 255, 0.45);
     background: rgba(255, 255, 255, 0.055);
   }
   .ab-ic {
@@ -430,7 +430,7 @@
     border-radius: 12px;
     font-size: 24px;
     color: var(--accent);
-    background: rgba(231, 170, 227, 0.12);
+    background: rgba(139, 124, 255, 0.12);
   }
   .ab-card h3 { margin: 0 0 8px; font-size: 17px; }
   .ab-card p { margin: 0; color: var(--text-dim); font-size: 14px; line-height: 1.6; }
@@ -485,10 +485,10 @@
   .ab-device i { font-size: 30px; }
   .ab-device:hover {
     transform: translateY(-4px);
-    border-color: rgba(231, 170, 227, 0.5);
+    border-color: rgba(139, 124, 255, 0.5);
     color: var(--text);
     background: rgba(255, 255, 255, 0.055);
-    box-shadow: 0 12px 30px rgba(231, 170, 227, 0.1);
+    box-shadow: 0 12px 30px rgba(139, 124, 255, 0.1);
   }
 
   .ab-faq {
@@ -511,9 +511,9 @@
     padding: clamp(28px, 4vw, 46px);
     text-align: center;
     border-radius: 20px;
-    border: 1px solid rgba(231, 170, 227, 0.3);
+    border: 1px solid rgba(139, 124, 255, 0.3);
     background:
-      radial-gradient(circle at 18% 12%, rgba(231, 170, 227, 0.18), transparent 62%),
+      radial-gradient(circle at 18% 12%, rgba(139, 124, 255, 0.18), transparent 62%),
       rgba(255, 255, 255, 0.035);
   }
   .ab-closing h2 {

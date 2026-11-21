@@ -371,7 +371,7 @@
     border-radius: 8px; padding: 8px 12px; font-size: 12px; font-family: inherit;
   }
   .tool:hover { border-color: var(--accent); color: var(--text); }
-  .tool.on { color: var(--accent); border-color: rgba(231, 170, 227, 0.6); background: rgba(231, 170, 227, 0.1); }
+  .tool.on { color: var(--accent); border-color: rgba(139, 124, 255, 0.6); background: rgba(139, 124, 255, 0.1); }
   .tool:disabled { opacity: 0.4; cursor: not-allowed; }
   .tool.nav { color: var(--text); }
   .spacer { flex: 1; }

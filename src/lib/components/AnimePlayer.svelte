@@ -447,7 +447,7 @@
   .start-play {
     width: 74px; height: 74px; border-radius: 50%; display: grid; place-items: center;
     font-size: 30px; color: #161016; background: var(--accent);
-    box-shadow: 0 0 0 10px rgba(231, 170, 227, 0.16); transition: transform 0.2s;
+    box-shadow: 0 0 0 10px rgba(139, 124, 255, 0.16); transition: transform 0.2s;
   }
   .start:hover .start-play { transform: scale(1.06); }
   .start-hint { font-size: 13px; color: #d9d9e0; }
@@ -494,7 +494,7 @@
   .menu-body { overflow-y: auto; padding: 6px; display: flex; flex-direction: column; gap: 2px; }
   .menu-body button { text-align: left; background: transparent; border: 0; color: var(--text); font-size: 13px; padding: 8px 10px; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between; gap: 8px; font-family: inherit; }
   .menu-body button:hover { background: var(--glass-fill); }
-  .menu-body button.active { color: var(--accent); background: rgba(231, 170, 227, 0.1); }
+  .menu-body button.active { color: var(--accent); background: rgba(139, 124, 255, 0.1); }
   .menu-body small { color: var(--text-dim); font-size: 10px; }
   .empty { color: var(--text-dim); font-size: 12px; padding: 8px 10px; margin: 0; }
 
