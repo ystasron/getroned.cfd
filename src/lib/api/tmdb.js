@@ -232,3 +232,13 @@ export const typeOf = (item) => {
   if (item.first_air_date || item.name || item.original_name || item.number_of_seasons) return 'tv';
   return 'movie';
 };
+
+/** Japanese animation — matches the ANIME discover filters. */
+export const isAnime = (item) =>
+  !!item && item.original_language === 'ja' && (item.genre_ids || []).includes(16);
+
+/** Watch-page link for a list/search result, sending anime to /anime. */
+export const watchHref = (item) => {
+  const type = typeOf(item);
+  return isAnime(item) ? `/anime/${item.id}?type=${type}` : `/${type}/${item.id}`;
+};
