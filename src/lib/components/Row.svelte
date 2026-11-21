@@ -4,6 +4,7 @@
   export let items = [];
   export let loading = false;
   export let type = null;
+  export let hrefFor = null;
 </script>
 
 <section class="row">
@@ -15,7 +16,7 @@
       {/each}
     {:else}
       {#each items as item (item.id + (item.media_type || ''))}
-        <Card {item} {type} />
+        <Card {item} {type} href={hrefFor ? hrefFor(item) : null} />
       {/each}
     {/if}
   </div>

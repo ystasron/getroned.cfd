@@ -18,3 +18,17 @@ export const SERVERS = [
   { id: 'ouzo', label: 'Baratheon' },
   { id: 'shochu', label: 'Greyjoy' }
 ];
+
+// Anime sources, split the way anime sites do it: a SUB/DUB type tab, then
+// named servers inside that type. DUB servers request the dubbed audio track
+// (`audio=dub` on /api/resolve) and fall back to the subbed file when the
+// resolver has no dub for the title.
+export const ANIME_SERVERS = [
+  { id: 'sherry', label: 'HD-1', kind: 'sub' },
+  { id: 'marsala', label: 'Vidstream', kind: 'sub' },
+  { id: 'ouzo', label: 'VidPlay', kind: 'sub' },
+  { id: 'shochu', label: 'MyCloud', kind: 'sub' },
+  { id: 'sherry', label: 'VidPlay', kind: 'dub' },
+  { id: 'marsala', label: 'Vidstream', kind: 'dub' },
+  { id: 'ouzo', label: 'MyCloud', kind: 'dub' }
+];

@@ -4,6 +4,7 @@
     { href: '/', icon: 'ph-house', label: 'Home' },
     { href: '/movies', icon: 'ph-film-slate', label: 'Movies' },
     { href: '/series', icon: 'ph-television-simple', label: 'Series' },
+    { href: '/anime', icon: 'ph-sparkle', label: 'Anime' },
     { href: '/bookmarks', icon: 'ph-bookmark-simple', label: 'List' }
   ];
 </script>
