@@ -9,6 +9,8 @@
 
 User-agent: *
 Allow: /
+# The internal API is not for crawlers, copies of the site or scrapers.
+Disallow: /api/
 
 # AI assistants, training crawlers and answer engines.
 User-agent: GPTBot

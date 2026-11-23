@@ -18,10 +18,11 @@ export async function GET({ url }) {
     if (!res.ok) throw error(502, `subtitle ${res.status}`);
     const text = await res.text();
     const vtt = /^WEBVTT/.test(text) ? text : srtToVtt(text);
+    // Same-origin only: no CORS header, so copies of the site on other
+    // domains can't load these tracks.
     return new Response(vtt, {
       headers: {
         'content-type': 'text/vtt; charset=utf-8',
-        'access-control-allow-origin': '*',
         'cache-control': 'public, max-age=3600'
       }
     });

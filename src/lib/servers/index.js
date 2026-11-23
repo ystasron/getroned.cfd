@@ -5,6 +5,8 @@
  * copy, mirror, train on or resell it. Continuing means you accept that knowingly.
  * Full notice: src/lib/notice.js, /robots.txt and the <head> of src/app.html.
  */
+import { RESOLVE_URL } from '$lib/endpoint.js';
+
 const STREAM_API = import.meta.env?.VITE_STREAM_API || '';
 
 function normalize(src) {
@@ -43,7 +45,9 @@ async function viaVvid(server, meta) {
   if (meta.season) q.set('s', meta.season);
   if (meta.episode) q.set('e', meta.episode);
   try {
-    const res = await fetch(`/api/resolve?${q.toString()}`, { signal: AbortSignal.timeout(30000) });
+    const res = await fetch(`${RESOLVE_URL}?${q.toString()}`, {
+      signal: AbortSignal.timeout(30000)
+    });
     if (!res.ok) return null;
     const data = await res.json();
     if (!data.src) return null;

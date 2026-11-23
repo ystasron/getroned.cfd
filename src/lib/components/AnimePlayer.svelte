@@ -9,6 +9,7 @@
   import { createEventDispatcher, onDestroy, onMount, tick } from 'svelte';
   import { resolveStream } from '$lib/servers/index.js';
   import { SERVERS } from '$lib/config.js';
+  import { SUBTITLE_URL } from '$lib/endpoint.js';
   import AdGate from './AdGate.svelte';
 
   /** { type, id, title, season, episode, episodeTitle } */
@@ -216,7 +217,7 @@
       track.kind = 'subtitles';
       track.label = s.label || `Track ${i + 1}`;
       track.srclang = (s.label || 'en').slice(0, 2).toLowerCase();
-      track.src = `/api/subtitle?url=${encodeURIComponent(s.file)}`;
+      track.src = `${SUBTITLE_URL}?url=${encodeURIComponent(s.file)}`;
       videoEl.appendChild(track);
     });
     const preferred = subs.findIndex((s) => s.default) >= 0 ? subs.findIndex((s) => s.default) : subs.findIndex((s) => /^english$/i.test(s.label || ''));

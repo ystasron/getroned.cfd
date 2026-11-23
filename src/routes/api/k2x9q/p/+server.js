@@ -21,11 +21,12 @@ export async function GET({ url }) {
       signal: AbortSignal.timeout(20000)
     });
     const body = await res.arrayBuffer();
+    // Same-origin only: no CORS header, so this can't be used as a public
+    // proxy from another site.
     return new Response(body, {
       status: res.status,
       headers: {
         'content-type': res.headers.get('content-type') || 'application/octet-stream',
-        'access-control-allow-origin': '*',
         'cache-control': 'no-store'
       }
     });

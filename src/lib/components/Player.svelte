@@ -10,6 +10,7 @@
   import AdGate from './AdGate.svelte';
   import { resolveStream } from '$lib/servers/index.js';
   import { SERVERS } from '$lib/config.js';
+  import { SUBTITLE_URL } from '$lib/endpoint.js';
 
   export let meta;
   let unlocked = false;
@@ -62,8 +63,7 @@
     track.dataset.sub = '1';
     track.kind = 'subtitles';
     track.label = chosen.label || 'Subtitles';
-    track.srclang = 'en';
-    track.src = `/api/subtitle?url=${encodeURIComponent(chosen.file)}`;
+    track.srclang = 'en';      track.src = `${SUBTITLE_URL}?url=${encodeURIComponent(chosen.file)}`;
     track.default = false;
     videoEl.appendChild(track);
     return track;
