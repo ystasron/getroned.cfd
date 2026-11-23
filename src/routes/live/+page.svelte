@@ -14,7 +14,7 @@
   });
 </script>
 
-<svelte:head><title>Live — getroned.cfd</title></svelte:head>
+<svelte:head><title>Live, getroned.cfd</title></svelte:head>
 <div class="page">
   <h1>Live TV</h1>
   {#if item}

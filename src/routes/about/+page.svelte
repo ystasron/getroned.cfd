@@ -78,8 +78,8 @@
 </script>
 
 <svelte:head>
-  <title>About — getroned.cfd</title>
-  <meta name="description" content="About getroned.cfd — a fast, clean destination for streaming movies and series." />
+  <title>About, getroned.cfd</title>
+  <meta name="description" content="About getroned.cfd, a fast, clean destination for streaming movies and series." />
 </svelte:head>
 
 <div class="page">
@@ -87,13 +87,13 @@
     <header class="ab-hero">
       <span class="ab-eyebrow">About</span>
       <h1 class="ab-title">About getroned.cfd</h1>
-      <p class="ab-lead">Your go-to destination for movies and series — fast, clean, and always up to date.</p>
+      <p class="ab-lead">Your go-to destination for movies and series, fast, clean, and always up to date.</p>
     </header>
 
     <section class="ab-section">
       <h2>Our Mission</h2>
-      <p>getroned.cfd was built with one goal in mind: to make great content accessible to everyone, everywhere. Entertainment should never be complicated. No bloated interfaces, no confusing navigation — just the content you want, delivered in the best quality possible, ready to watch in seconds.</p>
-      <p>What started as a small project has grown into a platform trusted by thousands of viewers daily. Every decision — from the way sources are matched to the way the interface is designed — is driven by the people who use it. You are the reason getroned.cfd exists, and you are the reason it keeps improving.</p>
+      <p>getroned.cfd was built with one goal in mind: to make great content accessible to everyone, everywhere. Entertainment should never be complicated. No bloated interfaces, no confusing navigation, just the content you want, delivered in the best quality possible, ready to watch in seconds.</p>
+      <p>What started as a small project has grown into a platform trusted by thousands of viewers daily. Every decision, from the way sources are matched to the way the interface is designed, is driven by the people who use it. You are the reason getroned.cfd exists, and you are the reason it keeps improving.</p>
     </section>
 
     <section class="ab-stats" bind:this={statsEl} aria-label="Library statistics">
@@ -164,7 +164,7 @@
 
     <section class="ab-section">
       <h2>Supported Devices</h2>
-      <p>getroned.cfd is designed to work across every device and platform. Whether you are at your desktop, on your phone, or casting to your TV — the experience is smooth and consistent.</p>
+      <p>getroned.cfd is designed to work across every device and platform. Whether you are at your desktop, on your phone, or casting to your TV, the experience is smooth and consistent.</p>
       <div class="ab-devices">
         <div class="ab-device"><i class="ph ph-desktop" aria-hidden="true"></i><span>Desktop</span></div>
         <div class="ab-device"><i class="ph ph-device-mobile" aria-hidden="true"></i><span>Mobile</span></div>
@@ -175,14 +175,14 @@
 
     <section class="ab-section">
       <h2>Our Commitment to Quality</h2>
-      <p>getroned.cfd does not just collect links — it curates them. Every source is checked before it goes live, prioritizing clean encodes, accurate subtitles, and proper audio sync. When a better version becomes available, it replaces the old one automatically.</p>
+      <p>getroned.cfd does not just collect links, it curates them. Every source is checked before it goes live, prioritizing clean encodes, accurate subtitles, and proper audio sync. When a better version becomes available, it replaces the old one automatically.</p>
       <p>Most content is available in Full HD 1080p. Where available, higher-resolution sources are offered too. For viewers on slower connections, compressed versions keep the picture sharp while keeping file sizes manageable.</p>
     </section>
 
     <section class="ab-section">
       <h2>Subtitles &amp; Languages</h2>
       <p>Content should be accessible to everyone regardless of language or hearing ability. getroned.cfd provides subtitles for virtually every title, synchronized to match each specific file version, with support for over 50 languages and growing.</p>
-      <p>Beyond subtitles, dubbed audio tracks and foreign-language originals are available too. From Bollywood hits to Korean dramas, French thrillers to Japanese anime — getroned.cfd is a global platform for a global audience.</p>
+      <p>Beyond subtitles, dubbed audio tracks and foreign-language originals are available too. From Bollywood hits to Korean dramas, French thrillers to Japanese anime, getroned.cfd is a global platform for a global audience.</p>
     </section>
 
     <section class="ab-section" id="faq">
@@ -261,7 +261,7 @@
 
     <section class="ab-closing">
       <h2>Built for Viewers. Driven by Community.</h2>
-      <p>getroned.cfd is more than a platform — it is a project built out of a genuine love for film and storytelling. Every feature shipped, every quality upgrade pushed, and every subtitle added is done because someone out there wanted it. Thank you for being part of what makes this worth building.</p>
+      <p>getroned.cfd is more than a platform, it is a project built out of a genuine love for film and storytelling. Every feature shipped, every quality upgrade pushed, and every subtitle added is done because someone out there wanted it. Thank you for being part of what makes this worth building.</p>
     </section>
   </div>
 </div>

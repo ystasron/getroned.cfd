@@ -86,7 +86,7 @@
   };
 </script>
 
-<svelte:head><title>{item ? titleOf(item) : 'Loading'} — getroned.cfd</title></svelte:head>
+<svelte:head><title>{item ? titleOf(item) : 'Loading'}, getroned.cfd</title></svelte:head>
 
 <div class="page">
   <section class="detail-hero">

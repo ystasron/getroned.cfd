@@ -91,6 +91,9 @@
   function resetForEpisode() {
     destroyHls();
     clearTracks();
+    // Every new episode (or season/season-title change) needs its own ad view.
+    unlocked = false;
+    if (videoEl) videoEl.pause();
     stream = null;
     levels = [];
     audioTracks = [];

@@ -21,7 +21,7 @@
 
 <header class="appbar glass">
   <div class="appbar-brand">
-    <a href="/" aria-label="getroned.cfd — home">
+    <a href="/" aria-label="getroned.cfd, home">
       <img class="brand-logo" src="/logo.svg" alt="getroned.cfd" />
     </a>
   </div>

@@ -233,7 +233,7 @@ export const typeOf = (item) => {
   return 'movie';
 };
 
-/** Japanese animation — matches the ANIME discover filters. */
+/** Japanese animation, matches the ANIME discover filters. */
 export const isAnime = (item) =>
   !!item && item.original_language === 'ja' && (item.genre_ids || []).includes(16);
 

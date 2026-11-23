@@ -31,7 +31,7 @@
   });
 </script>
 
-<svelte:head><title>getroned.cfd — Home</title></svelte:head>
+<svelte:head><title>getroned.cfd, Home</title></svelte:head>
 
 <div class="page">
   {#if hero}

@@ -12,7 +12,7 @@
   });
 </script>
 
-<svelte:head><title>Search: {query} — getroned.cfd</title></svelte:head>
+<svelte:head><title>Search: {query}, getroned.cfd</title></svelte:head>
 <div class="page">
   <Row title={'Results for “' + query + '”'} {items} {loading} hrefFor={watchHref} />
 </div>

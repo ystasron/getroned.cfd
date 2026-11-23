@@ -1,18 +1,17 @@
 <script>
   import { onMount } from 'svelte';
 
-  const KEY = 'roned-discord-dismissed';
   const HREF = 'https://discord.gg/tEpCSyNVu';
 
+  // Shown on every page load; dismissing only hides it for this page view.
   let show = false;
 
   onMount(() => {
-    try { show = !localStorage.getItem(KEY); } catch { show = true; }
+    show = true;
   });
 
   function dismiss() {
     show = false;
-    try { localStorage.setItem(KEY, '1'); } catch {}
   }
 </script>
 

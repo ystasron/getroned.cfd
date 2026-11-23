@@ -8,7 +8,7 @@
   });
 </script>
 
-<svelte:head><title>My List — getroned.cfd</title></svelte:head>
+<svelte:head><title>My List, getroned.cfd</title></svelte:head>
 <div class="page">
   {#if items.length}
     <Row title="My List" {items} />

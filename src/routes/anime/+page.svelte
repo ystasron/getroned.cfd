@@ -41,7 +41,7 @@
   const go = (item) => goto(hrefFor(item));
 </script>
 
-<svelte:head><title>Anime — getroned.cfd</title></svelte:head>
+<svelte:head><title>Anime, getroned.cfd</title></svelte:head>
 
 <div class="page">
   {#if hero}

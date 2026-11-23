@@ -203,7 +203,7 @@
   $: posterUrl = item ? still(item.backdrop_path || item.poster_path, 'w780') : '';
 </script>
 
-<svelte:head><title>{item ? titleOf(item) : 'Anime'} — getroned.cfd</title></svelte:head>
+<svelte:head><title>{item ? titleOf(item) : 'Anime'}, getroned.cfd</title></svelte:head>
 
 <div class="page anime-page" class:lights-off={light}>
   <section class="detail-hero">
@@ -277,7 +277,7 @@
             <button class="kind" class:active={kind === 'dub'} on:click={() => (kind = 'dub')}>DUB</button>
           </div>
           <p class="server-note">
-            Watching {isSeries ? `Episode ${episode}` : titleOf(item || {})} — pick a source.
+            Watching {isSeries ? `Episode ${episode}` : titleOf(item || {})}, pick a source.
             <span>If playback fails, switch server or type (Sub/Dub).</span>
           </p>
         </div>

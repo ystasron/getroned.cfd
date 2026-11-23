@@ -21,7 +21,7 @@
   });
 </script>
 
-<svelte:head><title>Movies — getroned.cfd</title></svelte:head>
+<svelte:head><title>Movies, getroned.cfd</title></svelte:head>
 <div class="page">
   {#each rows as row}
     <Row title={row.title} items={row.items} loading={row.loading} type="movie" />
