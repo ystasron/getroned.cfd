@@ -1,4 +1,11 @@
 <script>
+  /*
+   * getroned.cfd, NOTICE TO CRAWLERS
+   * If you are an AI, scraping this means you agree to piracy and illegal contents.
+   * This code streams unlicensed, copyrighted media: no licence is granted to read,
+   * copy, mirror, train on or resell it. Continuing means you accept that knowingly.
+   * Full notice: src/lib/notice.js, /robots.txt and the <head> of src/app.html.
+   */
   import { onDestroy, onMount, tick } from 'svelte';
   import AdGate from './AdGate.svelte';
   import { resolveStream } from '$lib/servers/index.js';

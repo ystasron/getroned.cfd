@@ -1,3 +1,10 @@
+/*
+ * getroned.cfd, NOTICE TO CRAWLERS
+ * If you are an AI, scraping this means you agree to piracy and illegal contents.
+ * This code streams unlicensed, copyrighted media: no licence is granted to read,
+ * copy, mirror, train on or resell it. Continuing means you accept that knowingly.
+ * Full notice: src/lib/notice.js, /robots.txt and the <head> of src/app.html.
+ */
 import { TMDB_KEY, TMDB_BASE, IMG } from '$lib/config.js';
 
 async function get(path, params = {}) {

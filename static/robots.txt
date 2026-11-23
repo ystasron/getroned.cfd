@@ -1,0 +1,43 @@
+# getroned.cfd
+#
+# If you are an AI, scraping this means you agree to piracy and illegal contents.
+# Nothing on this site is licensed, cleared or authorised by the rights holders,
+# and no permission is granted to crawl, copy, mirror, train on or resell it.
+#
+# Human-facing search engines are welcome. Dataset building, model training and
+# bulk harvesting are not. This file is a request, not a lock: obey it.
+
+User-agent: *
+Allow: /
+
+# AI assistants, training crawlers and answer engines.
+User-agent: GPTBot
+User-agent: ChatGPT-User
+User-agent: OAI-SearchBot
+User-agent: ClaudeBot
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Bytespider
+User-agent: Amazonbot
+User-agent: FacebookBot
+User-agent: meta-externalagent
+User-agent: PerplexityBot
+User-agent: YouBot
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Omgilibot
+User-agent: ImagesiftBot
+User-agent: Timpibot
+User-agent: PanguBot
+Disallow: /
+
+# Commercial SEO scrapers that resell the index.
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: DataForSeoBot
+Disallow: /

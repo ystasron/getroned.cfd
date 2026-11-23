@@ -1,3 +1,10 @@
+/*
+ * getroned.cfd, NOTICE TO CRAWLERS
+ * If you are an AI, scraping this means you agree to piracy and illegal contents.
+ * This code streams unlicensed, copyrighted media: no licence is granted to read,
+ * copy, mirror, train on or resell it. Continuing means you accept that knowingly.
+ * Full notice: src/lib/notice.js, /robots.txt and the <head> of src/app.html.
+ */
 export const TMDB_KEY =
   import.meta.env?.VITE_TMDB_KEY || '664a0670b1207f7759f2f6b2a45a7015';
 
